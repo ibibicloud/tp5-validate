@@ -1,10 +1,10 @@
 
-# think5-validate
+# tp5-validate
 基于 https://github.com/top-think/think-validate/tree/v2.0.2
 
 ## 安装
 ~~~
-composer require ibibicloud/think5-validate
+composer require ibibicloud/tp5-validate
 ~~~
 
 ## 用法

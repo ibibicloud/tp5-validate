@@ -1,9 +1,9 @@
 {
-    "name": "ibibicloud/think5-validate",
+    "name": "ibibicloud/tp5-validate",
     "license": "Apache-2.0",
     "require": {
         "php": ">=8.0.0",
-        "ibibicloud/think5-container":"*"
+        "ibibicloud/tp5-container":"*"
     },
     "autoload": {
         "psr-4": {
