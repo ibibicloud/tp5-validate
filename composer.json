@@ -2,7 +2,7 @@
     "name": "ibibicloud/tp5-validate",
     "license": "Apache-2.0",
     "require": {
-        "php": ">=8.0.0",
+        "php": ">=7.2.0",
         "ibibicloud/tp5-container":"*"
     },
     "autoload": {
