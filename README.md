@@ -1,13 +1,13 @@
 
-# tp5-validate
+## tp5-validate
 基于 https://github.com/top-think/think-validate/tree/v2.0.2
 
-## 安装
+### 安装
 ~~~
 composer require ibibicloud/tp5-validate
 ~~~
 
-## 用法
+### 用法
 ~~~
 use think\facade\Validate;
 
@@ -21,12 +21,35 @@ $data = [
     'email' => 'thinkphp#qq.com'
 ];
 
-if (!$validate->check($data)) {
+if ( !$validate->check($data) ) {
     var_dump($validate->getError());
 }
 ~~~
 
-支持创建验证器进行数据验证
+### 自定义 message 错误提示信息
+~~~
+use think\facade\Validate;
+
+$validate = Validate::rule([
+    'name'  => 'require|max:25',
+    'email' => 'email'
+])->message([
+    'name.require'  => '用户名必填',
+    'name.max'      => '用户名超出最大长度25',
+    'email.email'   => '邮箱格式错误'
+]);
+
+$data = [
+    'name'  => 'thinkphp',
+    'email' => 'thinkphp#qq.com'
+];
+
+if ( !$validate->check($data) ) {
+    var_dump($validate->getError());
+}
+~~~
+
+### 支持创建验证器进行数据验证
 ~~~
 <?php
 namespace app\index\validate;
@@ -61,7 +84,7 @@ $data = [
 
 $validate = new \app\index\validate\User;
 
-if (!$validate->check($data)) {
+if ( !$validate->check($data) ) {
     var_dump($validate->getError());
 }
 ~~~
