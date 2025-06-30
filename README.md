@@ -1,6 +1,7 @@
 
 ## tp5-validate
 基于 https://github.com/top-think/think-validate/tree/v2.0.2
+
 如果数据表设计了 <u>__软删除__</u> unique 验证规则 默认数据表排除 <u>__delete_time = 0__</u>
 ~~~
 `delete_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '删除时间',
